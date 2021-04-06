@@ -21,36 +21,46 @@
       <v-divider></v-divider>
 
       <v-list nav dense>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Home</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-account-box</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>About me</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-school</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Education &amp; ECA</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-account-group</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Discover Me</v-list-item-title>
-        </v-list-item>
-        <v-list-item link>
-          <v-list-item-icon>
-            <v-icon>mdi-message</v-icon>
-          </v-list-item-icon>
-          <v-list-item-title>Contact</v-list-item-title>
-        </v-list-item>
+        <g-link to="/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+        </g-link>
+        <g-link to="/about/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-account-box</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>About me</v-list-item-title>
+          </v-list-item>
+        </g-link>
+        <g-link to="/education/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-school</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Education &amp; ECA</v-list-item-title>
+          </v-list-item>
+        </g-link>
+        <g-link to="/discover/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-account-group</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Discover Me</v-list-item-title>
+          </v-list-item>
+        </g-link>
+        <g-link to="/contact/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-message</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Contact</v-list-item-title>
+          </v-list-item>
+        </g-link>
       </v-list>
     </v-navigation-drawer>
     <!-- <header class="header">
