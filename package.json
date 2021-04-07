@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist -b main"
+  },
+  "dependencies": {
+    "gh-pages": "^3.1.0",
+    "gridsome": "^0.7.0",
+    "vuetify": "^2.4.9"
+  },
+  "devDependencies": {
+    "webpack-node-externals": "^2.5.2"
+  }
+}
