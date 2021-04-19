@@ -1,68 +1,6 @@
 <template>
-  <v-app>
-    <v-navigation-drawer permanent expand-on-hover>
-      <v-list>
-        <v-list-item class="px-2">
-          <v-list-item-avatar>
-            <v-img src="https://randomuser.me/api/portraits/men/85.jpg"></v-img>
-          </v-list-item-avatar>
-        </v-list-item>
-
-        <v-list-item link>
-          <v-list-item-content>
-            <v-list-item-title class="title">
-              Rownok Asif Ovi
-            </v-list-item-title>
-            <v-list-item-subtitle>rownok.ovi.05@gmail.com</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
-      <v-divider></v-divider>
-
-      <v-list nav dense>
-        <g-link class="nav__link" to="/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-        </g-link>
-        <g-link class="nav__link" to="/about/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-account-box</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>About me</v-list-item-title>
-          </v-list-item>
-        </g-link>
-        <g-link class="nav__link" to="/education/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-school</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Education &amp; ECA</v-list-item-title>
-          </v-list-item>
-        </g-link>
-        <g-link class="nav__link" to="/discover/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-account-group</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Discover Me</v-list-item-title>
-          </v-list-item>
-        </g-link>
-        <g-link class="nav__link" to="/contact/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-message</v-icon>
-            </v-list-item-icon>
-            <v-list-item-title>Contact</v-list-item-title>
-          </v-list-item>
-        </g-link>
-      </v-list>
-    </v-navigation-drawer>
+  <v-app class="grey lighten-4">
+    <TheNavbar />
     <!-- <header class="header">
       <strong>
         <g-link class="nav__link" to="/">{{ $static.metadata.siteName }}</g-link>
@@ -73,14 +11,13 @@
       </nav>
     </header> -->
 
-    <v-main>
+    <v-content>
       <!-- Provides the application the proper gutter -->
-      <v-container fluid>
-        <!-- <slot /> -->
-        <!-- If using vue-router -->
-        <router-view></router-view>
-      </v-container>
-    </v-main>
+
+      <slot />
+      <!-- If using vue-router -->
+      <router-view></router-view>
+    </v-content>
   </v-app>
 </template>
 
@@ -92,6 +29,19 @@ query {
 }
 </static-query>
 
+<script>
+import TheNavbar from '@/components/TheNavbar'
+
+export default {
+  data: () => ({
+    fluid: true,
+    icons: ['mdi-facebook', 'mdi-twitter', 'mdi-linkedin', 'mdi-instagram'],
+  }),
+  components: {
+    TheNavbar,
+  },
+}
+</script>
 <style>
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
